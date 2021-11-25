@@ -19,6 +19,8 @@ Let's say that you have an Elgg Object called MyElggObject and you need to add t
 1. Add the lines below on **start.php** or **bootstrap.php**:
 
 ```php
+use Multilingual\MultilingualOptions;
+
 if (elgg_is_active_plugin('multilingual')) {
     $options = [
         'title' => ['type' => 'text', 'label' => 'myplugin:title', 'annotate' => false],
