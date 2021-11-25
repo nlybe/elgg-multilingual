@@ -1,0 +1,26 @@
+{
+    "name": "nlybe/multilingual",
+    "description": "Multilingual content on Elgg posts and content",
+    "type": "elgg-plugin",
+    "keywords": [
+        "elgg", 
+        "plugin",
+        "multilingual"
+    ],
+    "homepage": "https://github.com/nlybe/elgg-multilingual",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Nikos Lyberakis",
+            "email": "nikos@lyberakis.gr",
+            "role": "Web Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "composer/installers": ">=1.0.8"
+    },
+    "extra": {
+        "installer-name": "multilingual"
+    } 
+}
