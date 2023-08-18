@@ -17,7 +17,7 @@ $page = get_entity($guid);
 
 $container = $page->getContainerEntity();
 if (!$container) {
-	throw new \Elgg\EntityNotFoundException();
+	throw new EntityNotFoundException();
 }
 
 elgg_push_collection_breadcrumbs('object', 'page', $container);

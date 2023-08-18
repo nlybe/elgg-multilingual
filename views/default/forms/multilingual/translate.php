@@ -6,7 +6,7 @@
 
 use Multilingual\MultilingualOptions;
 
-elgg_require_css('multilingual/jquery-ui/1.12.1/themes/base/jquery-ui.css');
+elgg_require_css('multilingual/jquery-ui/1.13.2/themes/base/jquery-ui.min.css');
 elgg_require_js('multilingual/translate_form');
 
 $entity = elgg_extract('entity', $vars, '');

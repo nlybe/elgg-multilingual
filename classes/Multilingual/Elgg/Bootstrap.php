@@ -12,7 +12,7 @@ use Multilingual\MultilingualOptions;
 class Bootstrap extends DefaultPluginBootstrap {
 	
 	const HANDLERS = [];
-	
+
 	/**
 	 * {@inheritdoc}
 	 */
@@ -43,7 +43,8 @@ class Bootstrap extends DefaultPluginBootstrap {
 			}
 			else { 
 				$external_pages = ['about', 'terms', 'privacy'];
-			}		
+			}
+				
 			foreach($external_pages as $page) {
 				elgg_register_route("view:object:$page", [
 					'path' => "/{$page}",

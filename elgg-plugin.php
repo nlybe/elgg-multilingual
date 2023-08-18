@@ -11,11 +11,12 @@ require_once(dirname(__FILE__) . '/lib/hooks.php');
 require_once(dirname(__FILE__) . '/lib/functions.php'); 
 
 return [
+    'plugin' => [
+        'name' => 'Multilingual Content',
+		'version' => '4.2',
+		'dependencies' => [],
+	],	
     'bootstrap' => Bootstrap::class,
-	'settings' => [
-		'ml_pages' => 'yes',
-		'ml_externalpages' => 'yes',
-	],
 	'actions' => [
 		'ml_expages/edit' => ['access' => 'admin'],
 		'multilingual/translate' => [],
@@ -32,6 +33,10 @@ return [
 			'multilingual/graphics/' => __DIR__ . '/graphics',
 			'multilingual/jquery-ui/' => __DIR__ . '/vendors/jquery/ui/',
 		],
+	],
+	'settings' => [
+		'ml_pages' => 'yes',
+		'ml_externalpages' => 'yes',
 	],
 	'upgrades' => [],
 ];

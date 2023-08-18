@@ -22,5 +22,8 @@
     },
     "extra": {
         "installer-name": "multilingual"
-    } 
+    },
+	"conflict": {
+		"elgg/elgg": "<4.3"
+	}
 }

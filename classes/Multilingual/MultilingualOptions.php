@@ -60,7 +60,7 @@ class MultilingualOptions {
             
         return false;
     }
-    
+        
     /**
      * Get the allowed languages/translation
      * 
@@ -133,7 +133,7 @@ class MultilingualOptions {
      */
     Public Static function translatePrepareFormVars($entity = null, $container_guid = null) {
         // input names => defaults
-        $values = array(
+        $values = [
             'title' => '',
             'description' => '',
             'tags' => '',
@@ -142,7 +142,7 @@ class MultilingualOptions {
             'entity' => $entity,
             'guid' => null,
             'comments_on' => NULL,
-        ); 
+        ]; 
     
         if ($entity) {
             foreach (array_keys($values) as $field) {

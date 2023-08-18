@@ -8,11 +8,6 @@ use Multilingual\MultilingualOptions;
  
 $plugin_id = elgg_get_plugin_from_id(MultilingualOptions::PLUGIN_ID);
 
-$potential_yes_no = array(
-    MultilingualOptions::ML_YES => elgg_echo('multilingual:settings:yes'),
-    MultilingualOptions::ML_NO => elgg_echo('multilingual:settings:no'),
-);
-
 // Pages
 echo elgg_view_field([
     '#type' => 'checkbox',

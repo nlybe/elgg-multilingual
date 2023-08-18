@@ -16,7 +16,7 @@ $page = get_entity($page_guid);
 
 $container = $page->getContainerEntity();
 if (!$container) {
-	throw new \Elgg\EntityNotFoundException();
+	throw new EntityNotFoundException();
 }
 
 elgg_set_page_owner_guid($container->getGUID());

@@ -1,3 +1,4 @@
-#Ignore files that will need to be changed locally
+# Ignore files that will need to be changed locally
+
 /vendor/
 composer.lock

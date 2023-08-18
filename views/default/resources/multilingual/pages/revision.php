@@ -11,12 +11,12 @@ use Multilingual\MultilingualOptions;
 $id = elgg_extract('id', $vars);
 $annotation = elgg_get_annotation_from_id($id);
 if (!$annotation instanceof ElggAnnotation) {
-	throw new \Elgg\EntityNotFoundException();
+	throw new EntityNotFoundException();
 }
 
 $page = get_entity($annotation->entity_guid);
 if (!$page instanceof ElggPage) {
-	throw new \Elgg\EntityNotFoundException();
+	throw new EntityNotFoundException();
 }
 
 elgg_entity_gatekeeper($page->container_guid);

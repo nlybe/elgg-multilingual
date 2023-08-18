@@ -27,7 +27,6 @@ function ml_entity_menu_setup(\Elgg\Hook $hook) {
 	}
 
 	$translate_status = MultilingualOptions::getSubtypeForTranslation($entity->getSubtype());
-    
     if ($translate_status)    {        
         $return[] = \ElggMenuItem::factory([
             'name' => 'edit_translation',

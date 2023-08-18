@@ -1,6 +1,6 @@
 # Elgg Multilingual Plugin
 
-![Elgg 3.3](https://img.shields.io/badge/Elgg-3.3-orange.svg?style=flat-square)
+![Elgg 4.3](https://img.shields.io/badge/Elgg-4.3-orange.svg?style=flat-square)
 
 Multilingual content on Elgg posts and content.
 
@@ -49,6 +49,4 @@ $description = MultilingualOptions::getFieldValue('description', $entity);
 $location = MultilingualOptions::getFieldValue('location', $entity);
 ```
 
-## Requirements
 
-Requires: Elgg 3.3.x
