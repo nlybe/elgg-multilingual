@@ -7,8 +7,9 @@
  */
 
 use Multilingual\MultilingualOptions;
+use Elgg\Exceptions\Http\EntityNotFoundException;
 
-$guid = elgg_extract('guid', $vars);
+$guid = (int) elgg_extract('guid', $vars);
 
 elgg_entity_gatekeeper($guid, 'object', 'page');
 
@@ -27,6 +28,7 @@ ml_pages_prepare_parent_breadcrumbs($page);
 if ($page->canEdit() && $container->canWriteToContainer(0, 'object', 'page')) {
 	elgg_register_menu_item('title', [
 		'name' => 'subpage',
+		'icon' => 'plus',
 		'href' => elgg_generate_url('add:object:page', [
 			'guid' => $page->guid,
 		]),
@@ -44,6 +46,5 @@ echo elgg_view_page(MultilingualOptions::getFieldValue('title', $page), [
 		'page' => $page,
 	]),
 	'entity' => $page,
-], 'default', [
-	'entity' => $page,
+	'filter_id' => 'pages/view',
 ]);

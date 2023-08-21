@@ -23,7 +23,7 @@ if ($entity->write_access_id == ACCESS_PUBLIC) {
 if ($revision) {
 	$annotation = $revision;
 } else {
-	$current_lang = get_current_language();
+	$current_lang = elgg_get_current_language();
 	$annotation_name = 'page_'.$current_lang;
 	if (MultilingualOptions::checkIfDefaultLang($current_lang)) {
 		$annotation_name = 'page';

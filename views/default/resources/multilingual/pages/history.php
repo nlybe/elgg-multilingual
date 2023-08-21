@@ -8,9 +8,9 @@
 
 use Multilingual\MultilingualOptions;
 
-$page_guid = elgg_extract('guid', $vars);
+$page_guid = (int) elgg_extract('guid', $vars);
 
-elgg_entity_gatekeeper($page_guid, 'object', 'page');
+elgg_entity_gatekeeper($page_guid, 'object', 'page', true);
 
 $page = get_entity($page_guid);
 
@@ -32,7 +32,7 @@ elgg_push_breadcrumb(MultilingualOptions::getFieldValue('title', $page), $page->
 $title_txt = MultilingualOptions::getFieldValue('title', $page);
 $title = "{$title_txt}: " . elgg_echo('pages:history');
 
-$current_lang = get_current_language();
+$current_lang = elgg_get_current_language();
 $annotation_name = 'page_'.$current_lang;
 if (MultilingualOptions::checkIfDefaultLang($current_lang)) {
 	$annotation_name = 'page';
@@ -51,4 +51,6 @@ $content = elgg_list_annotations([
 
 echo elgg_view_page($title, [
 	'content' => $content,
+	'filter_id' => 'pages/history',
+	'filter_value' => 'history',
 ]);

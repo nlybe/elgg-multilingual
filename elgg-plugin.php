@@ -7,13 +7,12 @@
 use Multilingual\Elgg\Bootstrap;
 
 require_once(dirname(__FILE__) . '/lib/events.php');
-require_once(dirname(__FILE__) . '/lib/hooks.php');
 require_once(dirname(__FILE__) . '/lib/functions.php'); 
 
 return [
     'plugin' => [
         'name' => 'Multilingual Content',
-		'version' => '4.2',
+		'version' => '5.3',
 		'dependencies' => [],
 	],	
     'bootstrap' => Bootstrap::class,

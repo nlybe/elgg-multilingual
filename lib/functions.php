@@ -17,7 +17,7 @@ use Multilingual\MultilingualOptions;
 function ml_pages_prepare_parent_breadcrumbs($page) {
 	$crumbs = [];
 
-	while ($page instanceof ElggPage) {
+	while ($page instanceof \ElggPage) {
 		$crumbs[] = [
 			// 'text' => $page->getDisplayName(),
 			'text' => MultilingualOptions::getFieldValue('title', $page),

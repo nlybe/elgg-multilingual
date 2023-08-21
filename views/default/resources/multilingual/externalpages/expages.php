@@ -34,7 +34,7 @@ if (MultilingualOptions::isSitePagesActive()) {		// multilingual
 		$description = elgg_echo('expages:notset');
 	}
 	else {
-		$field_name = 'description_'.get_current_language();
+		$field_name = 'description_'.elgg_get_current_language();
 		$description = $object->$field_name;
 		if (!$description) {
 			$description = $object->description?$object->description:elgg_echo('expages:notset');

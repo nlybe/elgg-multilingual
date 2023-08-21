@@ -182,7 +182,7 @@ class MultilingualOptions {
             return false;
         }
         
-        $current_lang = get_current_language();
+        $current_lang = elgg_get_current_language();
         $field_name_lang = "${field_name}_${current_lang}";        
         $active_langs = self::ml_language_selector_get_allowed_translations();
         foreach ($active_langs as $key_l => $value_l) {
