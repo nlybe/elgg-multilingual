@@ -95,10 +95,10 @@ if (elgg_extract('full_view', $vars)) {
         'text' => MultilingualOptions::getFieldValue('title', $entity),
 	]);
 	
+	$excerpt = MultilingualOptions::getFieldValue('description', $entity);
 	$params = [
 		'metadata' => $metadata,
-		// 'content' => elgg_get_excerpt($entity->description),
-		'content' => elgg_get_excerpt(MultilingualOptions::getFieldValue('description', $entity)),
+		'content' => $excerpt?elgg_get_excerpt($excerpt):'',
 		'title' => $title,
 		'icon_entity' => $icon_entity,
 	];

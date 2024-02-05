@@ -30,7 +30,7 @@ $title_link = elgg_view('output/url', [
 $params = [
 	'title' => elgg_format_element('h3', [], $title_link),
 	'byline' => true,
-	'content' => elgg_get_excerpt($annotation->value),
+	'content' => $annotation->value?elgg_get_excerpt($annotation->value):'',
 ];
 $params = $params + $vars;
 

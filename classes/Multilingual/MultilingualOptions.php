@@ -193,7 +193,7 @@ class MultilingualOptions {
 
         return $entity->$field_name;
     }
-
+    
     /**
      * Return the original field value or the translated
      *
