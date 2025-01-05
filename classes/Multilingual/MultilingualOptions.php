@@ -86,8 +86,8 @@ class MultilingualOptions {
     /**
      * Function to register a subtype for translation with field to translate
      *
-     * @param string $register_name      Name of the register where the fields are configured
-     * @param array  $optioterm_fields_to_translatens            Array of options
+     * @param string $register_name: Name of the register where the fields are configured
+     * @param array  $term_fields_to_translate: Array of options
      *
      * @return void
      */
